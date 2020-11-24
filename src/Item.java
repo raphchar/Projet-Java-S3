@@ -1,11 +1,11 @@
 public class Item {
 
     // Définition des variables
-    private final String name;
-    private final int weight;
+    private String name;
+    private double weight;
 
     // Constructeur
-    public Item(String name, int weight) {
+    public Item(String name, double weight) {
         this.name = name;
         this.weight = weight;
     }
@@ -14,7 +14,7 @@ public class Item {
     public String getName() {
         return name;
     }
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 }
