@@ -2,7 +2,7 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/raphchar/Projet-Java-S3/graphs/commit-activity)  [![made-with-java](https://img.shields.io/badge/Made%20with-Java-1f425f.svg)](https://www.java.com/fr/about/) [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-![Capture d’écran 2020-11-25 à 20.03.52](/Users/raphaelcharron/Desktop/Capture d’écran 2020-11-25 à 20.03.52.png)
+
 
 ## Space Challenge
 
