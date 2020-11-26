@@ -22,7 +22,19 @@ public class Rocket implements SpaceShip{
 
     ArrayList<Item> listeItems = new ArrayList<Item>();     // Liste des items dans la fusée
 
-    // CONSTRUCTEUR
+    /**
+     * Constructeur
+     * @param cost cost of the rocket in dollar
+     * @param rocketWeight weight of the rocket in kilograms
+     * @param maxWeight the maximum weight allowed for the rocket in kilograms
+     * @param cargoCarried the curent weight of the element in the rocket in kilograms
+     * @param cargoLimit the maximum weight of the cargo in the rocket
+     * @param realWeight weight of the rocket + cargo
+     * @param rateOfExplosion percentage of explosion
+     * @param rateOfCrash percentage of crash
+     * @param rateOfLauchExplosion percentage of explosion during lauch
+     * @param rateOfLandingExplosion percentage of explosion during landind
+     */
     public Rocket(int cost, int rocketWeight, int maxWeight, int cargoCarried, int cargoLimit, int realWeight, double rateOfExplosion, double rateOfCrash, double rateOfLauchExplosion, double rateOfLandingExplosion) {
         this.cost = cost;
         this.rocketWeight = rocketWeight;
@@ -73,17 +85,29 @@ public class Rocket implements SpaceShip{
         return rateOfLandingExplosion;
     }
 
-    // Méthode de l'interface
+    /**
+     * Determine if the launch is a success or not
+     * @return true if we have a successful launch, false if it fails
+     */
     @Override
     public boolean launch() {
         return true;
     }
 
+    /**
+     * Determine if the land is a sucess or not
+     * @return true if we have a successful land, false if it fails
+     */
     @Override
     public boolean land() {
         return true;
     }
 
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean canCarry(Item item) {
         return (getRocketWeight() + item.getWeight()) <= (maxWeight - rocketWeight);
