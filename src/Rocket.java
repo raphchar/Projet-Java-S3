@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Random;
+
 
 public class Rocket implements SpaceShip{
 
@@ -17,6 +19,8 @@ public class Rocket implements SpaceShip{
     double rateOfLandingExplosion;         // Pourcentage de risque d'explosion à l'atterissage
 
     double random;                         // Nombre aléatoire
+
+    ArrayList<Item> listeItems = new ArrayList<Item>();     // Liste des items dans la fusée
 
     // CONSTRUCTEUR
     public Rocket(int cost, int rocketWeight, int maxWeight, int cargoCarried, int cargoLimit, int realWeight, double rateOfExplosion, double rateOfCrash, double rateOfLauchExplosion, double rateOfLandingExplosion) {
@@ -87,8 +91,9 @@ public class Rocket implements SpaceShip{
 
     @Override
     public void carry(Item item) {
-        // A compléter pas très bien compris l'énoncé
+        // Test si l'item est déja dans la liste la dedans??
         rocketWeight += item.getWeight();
+        listeItems.add(item);
     }
 
 
