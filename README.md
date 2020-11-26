@@ -12,7 +12,6 @@ In this project, you will build a simulation that will help us with our mission 
 The mission is to send a list of items (Habitats, bunkers, food supplies, and rovers) to Mars, but we need to run some simulations first to pick the correct fleet of rockets.
 We've already designed 2 rocket prototypes, but we need your help to design and run some simulations to help us decide which type to use.
 
-![Capture d’écran 2020-11-25 à 20.09.59](/Users/raphaelcharron/Desktop/Capture d’écran 2020-11-25 à 20.09.59.png)
 
 #### U-1
 
