@@ -17,9 +17,9 @@ public class Simulation {
             while(scan.hasNextLine()){
                 String ligne = scan.nextLine();
 
-                int indexSperateur = ligne.indexOf("=");        // On récupère l'index du = pour faire la séparation name, weight
-                String name = ligne.substring(0, indexSperateur);
-                double weight = Double.parseDouble(ligne.substring(indexSperateur + 1));
+                int indexSeparator = ligne.indexOf("=");        // On récupère l'index du = pour faire la séparation name, weight
+                String name = ligne.substring(0, indexSeparator);
+                double weight = Double.parseDouble(ligne.substring(indexSeparator + 1));
 
                 // Ajoute dans Item
                 Item item = new Item(name, weight);                 // On crée un nouvel item pour chaque ligne
