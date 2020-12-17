@@ -9,12 +9,12 @@ public class U1 extends Rocket {
     @Override
     public boolean land() {
         double random = Math.random() * 0.1;
-        return random < (0.01 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
+        return random > (0.01 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
     }
 
     @Override
     public boolean launch() {
         double random = Math.random() * 0.1;
-        return random < (0.05 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
+        return random > (0.05 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
     }
 }
