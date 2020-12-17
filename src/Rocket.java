@@ -8,6 +8,7 @@ public class Rocket implements SpaceShip{
     private ArrayList<Item> items;              // Liste des items dans la fusée
 
     public Rocket(int cost, double rocketWeight, double maxWeight) {
+        items = new ArrayList<>();
         this.cost = cost;
         this.rocketWeight = rocketWeight;
         this.maxWeight = maxWeight;
@@ -37,7 +38,7 @@ public class Rocket implements SpaceShip{
 
     @Override
     public boolean canCarry(Item item) {
-        return (getRocketWeight() + item.getWeight()) <= this.maxWeight;
+        return (getCargoWeight() + item.getWeight()) <= (maxWeight - rocketWeight);
     }
 
     @Override
@@ -53,7 +54,4 @@ public class Rocket implements SpaceShip{
         return cargoWeight;
     }
 
-    public ArrayList<Item> getCargo(){
-        return items;
-    }
 }
