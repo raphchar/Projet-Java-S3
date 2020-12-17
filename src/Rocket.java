@@ -5,7 +5,7 @@ public class Rocket implements SpaceShip{
     int cost;                                   // Prix de la fusée
     double rocketWeight;                        // Poids de la fusée
     double maxWeight;                           // Poids max de la fusée
-    private ArrayList<Item> items;              // Liste des items dans la fusée
+    ArrayList<Item> items;              // Liste des items dans la fusée
 
     public Rocket(int cost, double rocketWeight, double maxWeight) {
         items = new ArrayList<>();
