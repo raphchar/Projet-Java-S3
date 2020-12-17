@@ -4,12 +4,8 @@ public class Item {
     String name;
     double weight;
 
-    /**
-     * Constructeur
-     * @param name the name of the item
-     * @param weight the eight of the item in kilograms
-     */
-    public Item() {
+    // Constructeur
+    public Item(String name, double weight) {
         this.name = name;
         this.weight = weight;
     }

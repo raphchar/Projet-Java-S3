@@ -6,8 +6,8 @@
     <node x="511.0" y="0.0">Item</node>
     <node x="682.0" y="0.0">Simulation</node>
     <node x="130.5" y="0.0">SpaceShip</node>
-    <node x="0.0" y="170.0">Rocket</node>
     <node x="64.0" y="651.0">U1</node>
+    <node x="0.0" y="170.0">Rocket</node>
     <node x="243.0" y="651.0">U2</node>
   </nodes>
   <notes />
@@ -29,8 +29,10 @@
       <point x="116.5" y="215.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="242.36363636363637" y="283.1428571428571" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.8562421185372006" x="509.5" y="386.5" />
+  <SelectedNodes>
+    <node>Item</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>

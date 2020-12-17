@@ -6,21 +6,11 @@ public class U2 extends Rocket {
         super(120,18000,29000);
     }
 
-    /**
-     * Determine if the land is a success or not based on the comparison of a random number and
-     * the rate of landing explosion of U1 rocket
-     * @return boolean for the success or not of landing
-     */
     @Override
     public boolean land() {
         return (0.8 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())) >= random);
     }
 
-    /**
-     * Determine if the launch is a success or not based on the comparison of a random number and
-     * the rate of launch explosion of U1 rocket
-     * @return boolean for the success or not of launch
-     */
     @Override
     public boolean launch() {
         return (0.4 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())) >= random);
