@@ -99,6 +99,6 @@ public class Simulation {
             }
             Rockets.remove(i);
         }
-        return totalCost;
+        return totalCost * 1000000;
     }
 }
