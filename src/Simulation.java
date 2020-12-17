@@ -86,7 +86,7 @@ public class Simulation {
                 totalCost += Rockets.get(i).getCost();
                 launch = Rockets.get(i).launch();
                 land = Rockets.get(i).land();
-                if (!launch){
+                /*if (!launch){
                     System.out.println("Rocket exploded during the launch. We will rebuild it and relaunch it.");
                 } else{
                     System.out.println("Rocket launch with success.");
@@ -95,7 +95,7 @@ public class Simulation {
                     } else{
                         System.out.println("Rocket land with success.");
                     }
-                }
+                }*/
             }
             Rockets.remove(i);
         }
