@@ -1,0 +1,28 @@
+Pour l'affichage on peut eventuelt choisir si on veut des stats ou juste une simu? 
+	- avec satts ca run pleins de simu et ca affiche les stats
+	- juste un simu sinon : ca donne les ODG
+
+
+SI JUSTE UNE SIMU : 
+
+1. nb de crash par test + par phase + par fusée
+2. % de chance qu'il y ai un crash par test + par phase + par fusée
+3. + grande chance de crash et plus petite par phase, par test et par fuséee
+GUI : 1 2 et 3 dans un tableau ou graphique?
+
+
+4. cout total
+5. nb de crash, et de réussites du premier coup?
+GUI : 4 et 5 au milieu en grand : c'est ce qui interesse le plus?
+
+
+SI STATS : 
+
+6. nb de simu faites
+7. cout moyen 
+8. %crash moyen
+9. meilleure fusée
+
+
+Puis une partie plsu sophistiquée avec ce qu'ils veulent : des calculs de distribution? 
+
