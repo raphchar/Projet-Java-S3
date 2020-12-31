@@ -74,9 +74,11 @@ public class Simulation {
     }
 
 
-    public int runSimulation(ArrayList<Rocket> Rockets){
+    public Object[] runSimulation(ArrayList<Rocket> Rockets){
         // The total cost for the launch
         int totalCost = 0;
+        int launchCrash = 0;
+        int landCrash = 0;
         for (int i = 0; i <= Rockets.size()-1; i++){
             //Boolean variable for the if condition
             boolean launch = false;
@@ -86,19 +88,19 @@ public class Simulation {
                 totalCost += Rockets.get(i).getCost();
                 launch = Rockets.get(i).launch();
                 land = Rockets.get(i).land();
-                /*if (!launch){
-                    System.out.println("Rocket exploded during the launch. We will rebuild it and relaunch it.");
+                if (!launch){
+                    //Rocket exploded during the launch
+                    launchCrash += 1;
                 } else{
-                    System.out.println("Rocket launch with success.");
                     if(!land){
-                        System.out.println("Rocket exploded during the land. We will rebuild it and relaunch it");
-                    } else{
-                        System.out.println("Rocket land with success.");
+                        //Rocket exploded during the land
+                        landCrash += 1;
                     }
-                }*/
+                }
             }
             Rockets.remove(i);
+
         }
-        return totalCost;
+        return new Object[]{totalCost, launchCrash, landCrash};
     }
 }

@@ -9,12 +9,12 @@ public class U2 extends Rocket {
     @Override
     public boolean land() {
         double random = Math.random() * 0.8;
-        return (0.08 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())) >= random);
+        return random < (0.08 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())));
     }
 
     @Override
     public boolean launch() {
         double random = Math.random() * 0.4;
-        return (0.04 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())) >= random);
+        return random < (0.04 * (getCargoWeight()/(getMaxWeight() - getRocketWeight())));
     }
 }
