@@ -1,4 +1,8 @@
+import java.util.Random;
+
 public class U1 extends Rocket {
+
+    private final Random random = new Random();
 
     // Constructeur de U1
     public U1() {
@@ -8,13 +12,11 @@ public class U1 extends Rocket {
 
     @Override
     public boolean land() {
-        double random = Math.random() * 0.1;
-        return random < (0.01 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
+        return random.nextDouble() < (0.01 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
     }
 
     @Override
     public boolean launch() {
-        double random = Math.random() * 0.1;
-        return random < (0.05 * getCargoWeight()/(getMaxWeight() - getRocketWeight()));
+        return random.nextDouble() < (0.05 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
     }
 }
