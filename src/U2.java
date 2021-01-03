@@ -11,12 +11,14 @@ public class U2 extends Rocket {
 
     @Override
     public boolean land() {
-        return random.nextDouble() < (0.08 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+        this.crashPerLand = (float) (0.08 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+        return random.nextDouble() < this.crashPerLand;
     }
 
 
     @Override
     public boolean launch() {
-        return random.nextDouble() < (0.04 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+        this.crashPerLaunch = (float) (0.04 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+        return random.nextDouble() < this.crashPerLaunch;
     }
 }

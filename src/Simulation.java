@@ -79,6 +79,11 @@ public class Simulation {
         int totalCost = 0;
         int launchCrash = 0;
         int landCrash = 0;
+        float minCrashPerLand = 1;
+        float maxCrashPerLand = 0;
+        float minCrashPerLaunch = 1;
+        float maxCrashPerLaunch = 0;
+
         for (int i = 0; i <= Rockets.size()-1; i++){
             //Boolean variable for the if condition
             boolean launch = false;
@@ -88,6 +93,21 @@ public class Simulation {
                 totalCost += Rockets.get(i).getCost();
                 launch = Rockets.get(i).launch();
                 land = Rockets.get(i).land();
+
+                // get the min and max of crash percentage for GUI
+                if (Rockets.get(i).crashPerLand > maxCrashPerLand){
+                    maxCrashPerLand = Rockets.get(i).crashPerLand;
+                }
+                if (Rockets.get(i).crashPerLand < minCrashPerLand){
+                    minCrashPerLand = Rockets.get(i).crashPerLand;
+                }
+                if (Rockets.get(i).crashPerLaunch > maxCrashPerLaunch){
+                    maxCrashPerLaunch = Rockets.get(i).crashPerLaunch;
+                }
+                if (Rockets.get(i).crashPerLand < maxCrashPerLaunch){
+                    minCrashPerLaunch = Rockets.get(i).crashPerLaunch;
+                }
+
                 if (!launch){
                     //Rocket exploded during the launch
                     launchCrash += 1;
@@ -101,6 +121,6 @@ public class Simulation {
             Rockets.remove(i);
 
         }
-        return new Object[]{totalCost, launchCrash, landCrash};
+        return new Object[]{totalCost, launchCrash, landCrash, minCrashPerLand, maxCrashPerLand, minCrashPerLaunch, maxCrashPerLaunch};
     }
 }

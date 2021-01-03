@@ -6,6 +6,8 @@ public class Rocket implements SpaceShip{
     double rocketWeight;                        // Poids de la fusée
     double maxWeight;                           // Poids max de la fusée
     ArrayList<Item> items;              // Liste des items dans la fusée
+    float crashPerLaunch;                         // pourcentage de crash de la fusée au lancement
+    float crashPerLand;                         // pourcentage de crash de la fusée à l'atterissage
 
     public Rocket(int cost, double rocketWeight, double maxWeight) {
         items = new ArrayList<>();
