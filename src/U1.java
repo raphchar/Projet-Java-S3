@@ -12,7 +12,7 @@ public class U1 extends Rocket {
 
     @Override
     public boolean land() {
-        float percentage = (float) (0.01 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
+        float percentage = (float) (0.1 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
 
         if (percentage > maxCrashLandPer) {
             maxCrashLandPer = percentage;
@@ -25,7 +25,7 @@ public class U1 extends Rocket {
 
     @Override
     public boolean launch() {
-        float percentage = (float) (0.05 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
+        float percentage = (float) (0.5 * this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight()));
 
         if (percentage > maxCrashLaunchPer) {
             maxCrashLaunchPer = percentage;
