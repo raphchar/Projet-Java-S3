@@ -94,29 +94,22 @@ public class Simulation {
                 launch = Rockets.get(i).launch();
                 land = Rockets.get(i).land();
 
-                // get the min and max of crash percentage for GUI
-                if (Rockets.get(i).crashPerLand > maxCrashPerLand){
-                    maxCrashPerLand = Rockets.get(i).crashPerLand;
-                }
-                if (Rockets.get(i).crashPerLand < minCrashPerLand){
-                    minCrashPerLand = Rockets.get(i).crashPerLand;
-                }
-                if (Rockets.get(i).crashPerLaunch > maxCrashPerLaunch){
-                    maxCrashPerLaunch = Rockets.get(i).crashPerLaunch;
-                }
-                if (Rockets.get(i).crashPerLand < maxCrashPerLaunch){
-                    minCrashPerLaunch = Rockets.get(i).crashPerLaunch;
-                }
-
                 if (!launch){
                     //Rocket exploded during the launch
                     launchCrash += 1;
-                } else{
+                }
+                else{
                     if(!land){
                         //Rocket exploded during the land
                         landCrash += 1;
                     }
                 }
+            }
+            if (i == Rockets.size()-1) {
+                minCrashPerLand = Rockets.get(0).getMinCrashLandPer();
+                maxCrashPerLand = Rockets.get(0).getMaxCrashLandPer();
+                minCrashPerLaunch = Rockets.get(0).getMinCrashLaunchPer();
+                maxCrashPerLaunch = Rockets.get(0).getMaxCrashLaunchPer();
             }
             Rockets.remove(i);
 

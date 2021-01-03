@@ -6,8 +6,10 @@ public class Rocket implements SpaceShip{
     double rocketWeight;                        // Poids de la fusée
     double maxWeight;                           // Poids max de la fusée
     ArrayList<Item> items;              // Liste des items dans la fusée
-    float crashPerLaunch;                         // pourcentage de crash de la fusée au lancement
-    float crashPerLand;                         // pourcentage de crash de la fusée à l'atterissage
+    float maxCrashLaunchPer = 0;                         // pourcentage de crash de la fusée au lancement
+    float minCrashLaunchPer = 1;                         // pourcentage de crash de la fusée à l'atterissage
+    float minCrashLandPer = 1;
+    float maxCrashLandPer = 0;
 
     public Rocket(int cost, double rocketWeight, double maxWeight) {
         items = new ArrayList<>();
@@ -20,6 +22,23 @@ public class Rocket implements SpaceShip{
     public int getCost() {
         return cost;
     }
+
+    public float getMaxCrashLaunchPer() {
+        return maxCrashLaunchPer;
+    }
+
+    public float getMinCrashLaunchPer() {
+        return minCrashLaunchPer;
+    }
+
+    public float getMinCrashLandPer() {
+        return minCrashLandPer;
+    }
+
+    public float getMaxCrashLandPer() {
+        return maxCrashLandPer;
+    }
+
     public double getRocketWeight() {
         return rocketWeight;
     }

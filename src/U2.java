@@ -11,14 +11,28 @@ public class U2 extends Rocket {
 
     @Override
     public boolean land() {
-        this.crashPerLand = (float) (0.08 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
-        return random.nextDouble() < this.crashPerLand;
+        float percentage = (float) (0.08 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+
+        if (percentage > maxCrashLandPer) {
+            maxCrashLandPer = percentage;
+        }
+        if (percentage < minCrashLandPer) {
+            minCrashLandPer = percentage;
+        }
+        return random.nextDouble() > percentage;
     }
 
 
     @Override
     public boolean launch() {
-        this.crashPerLaunch = (float) (0.04 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
-        return random.nextDouble() < this.crashPerLaunch;
+        float percentage = (float) (0.04 * (this.getCargoWeight()/(this.getMaxWeight() - this.getRocketWeight())));
+
+        if (percentage > maxCrashLaunchPer) {
+            maxCrashLaunchPer = percentage;
+        }
+        if (percentage < minCrashLaunchPer) {
+            minCrashLaunchPer = percentage;
+        }
+        return random.nextDouble() > percentage;
     }
 }
