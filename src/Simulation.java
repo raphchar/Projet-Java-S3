@@ -79,10 +79,13 @@ public class Simulation {
         int totalCost = 0;
         int launchCrash = 0;
         int landCrash = 0;
+        /* A VERIFIER */
         float minCrashPerLand = 1;
         float maxCrashPerLand = 0;
         float minCrashPerLaunch = 1;
         float maxCrashPerLaunch = 0;
+        // Variables pour les pourcentages
+        float crashPerLand = 0, crashPerLaunch = 0;
 
         for (int i = 0; i <= Rockets.size()-1; i++){
             //Boolean variable for the if condition

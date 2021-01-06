@@ -16,19 +16,26 @@ public class Main {
         int u1Ph1_launchCrash = (int) u1Ph1_simu[1];
         int u1Ph1_landCrash = (int) u1Ph1_simu[2];
         int u1Ph1_crash = u1Ph1_landCrash + u1Ph1_launchCrash;
-        float u1Ph1_minlandCrashPer = (float) u1Ph1_simu[3];
-        float u1Ph1_maxlandCrashPer = (float) u1Ph1_simu[4];
-        float u1Ph1_minlaunchCrashPer = (float) u1Ph1_simu[5];
-        float u1Ph1_maxlaunchCrashPer = (float) u1Ph1_simu[6];
+        //float u1Ph1_minlandCrashPer = (float) u1Ph1_simu[3];
+        //float u1Ph1_maxlandCrashPer = (float) u1Ph1_simu[4];
+        //float u1Ph1_minlaunchCrashPer = (float) u1Ph1_simu[5];
+        //float u1Ph1_maxlaunchCrashPer = (float) u1Ph1_simu[6];
+
+        float u1Ph1_landCrashPer = 0, u1Ph1_launchCrashPer = 0;
+        if (u1Ph1_crash > 0){
+            u1Ph1_landCrashPer =  (u1Ph1_landCrash/(float) u1Ph1_crash) * 100;
+            u1Ph1_launchCrashPer = (u1Ph1_launchCrash/(float) u1Ph1_crash) * 100;
+        }
 
         System.out.println("---------------------------------------------------------------------");
         System.out.println("Phase 1 with U1: $" + u1Ph1_cost + " Million");
         System.out.println("    Phase 1 with U1: " + u1Ph1_launchCrash + " Crashes during launch");
         System.out.println("    Phase 1 with U1: " + u1Ph1_landCrash + " Crashes during land");
         System.out.println("    Phase 1 with U1 Crashes: " + u1Ph1_crash);
-        System.out.println("    Phase 1 with U1 Launching: " + u1Ph1_minlaunchCrashPer + "% of crashing at min, " + u1Ph1_maxlaunchCrashPer + "% of crashing at max");
-        System.out.println("    Phase 1 with U1 Landing: " + u1Ph1_minlandCrashPer + "% of crashing at min, " + u1Ph1_maxlandCrashPer + "% of crashing at max");
-
+        //System.out.println("    Phase 1 with U1 Launching: " + u1Ph1_minlaunchCrashPer + "% of crashing at min, " + u1Ph1_maxlaunchCrashPer + "% of crashing at max");
+        //System.out.println("    Phase 1 with U1 Landing: " + u1Ph1_minlandCrashPer + "% of crashing at min, " + u1Ph1_maxlandCrashPer + "% of crashing at max");
+        System.out.println("    Phase 1 with U1 Launching: " + u1Ph1_launchCrashPer + "% of crashing.");
+        System.out.println("    Phase 1 with U1 Landing: " + u1Ph1_landCrashPer + "% of crashing.");
         //System.out.println("---------------------------------------------------------------------");
 
 
@@ -41,19 +48,26 @@ public class Main {
         int u1Ph2_launchCrash = (int) u1Ph2_simu[1];
         int u1Ph2_landCrash = (int) u1Ph2_simu[2];
         int u1Ph2_crash = u1Ph2_landCrash + u1Ph2_launchCrash;
-        float u1Ph2_minlandCrashPer = (float) u1Ph2_simu[3];
-        float u1Ph2_maxlandCrashPer = (float) u1Ph2_simu[4];
-        float u1Ph2_minlaunchCrashPer = (float) u1Ph2_simu[5];
-        float u1Ph2_maxlaunchCrashPer = (float) u1Ph2_simu[6];
+        //float u1Ph2_minlandCrashPer = (float) u1Ph2_simu[3];
+        //float u1Ph2_maxlandCrashPer = (float) u1Ph2_simu[4];
+        //float u1Ph2_minlaunchCrashPer = (float) u1Ph2_simu[5];
+        //float u1Ph2_maxlaunchCrashPer = (float) u1Ph2_simu[6];
+
+        float u1Ph2_landCrashPer = 0, u1Ph2_launchCrashPer = 0;
+        if (u1Ph2_crash > 0){
+            u1Ph2_landCrashPer = (u1Ph2_landCrash/(float) u1Ph2_crash) * 100;
+            u1Ph2_launchCrashPer = (u1Ph2_launchCrash/(float) u1Ph2_crash) * 100;
+        }
 
         System.out.println("---------------------------------------------------------------------");
         System.out.println("Phase 2 with U1: $" + u1Ph2_cost + " Million");
         System.out.println("    Phase 2 with U1: " + u1Ph2_launchCrash + " Crashes during launch");
         System.out.println("    Phase 2 with U1: " + u1Ph2_landCrash + " Crashes during land");
         System.out.println("    Phase 2 with U1 Crash: " + u1Ph2_crash);
-        System.out.println("    Phase 2 with U1 Launching: " + u1Ph2_minlaunchCrashPer + "% of crashing at min, " + u1Ph2_maxlaunchCrashPer + "% of crashing at max");
-        System.out.println("    Phase 2 with U1 Landing: " + u1Ph2_minlandCrashPer + "% of crashing at min, " + u1Ph2_maxlandCrashPer + "% of crashing at max");
-
+        //System.out.println("    Phase 2 with U1 Launching: " + u1Ph2_minlaunchCrashPer + "% of crashing at min, " + u1Ph2_maxlaunchCrashPer + "% of crashing at max");
+        //System.out.println("    Phase 2 with U1 Landing: " + u1Ph2_minlandCrashPer + "% of crashing at min, " + u1Ph2_maxlandCrashPer + "% of crashing at max");
+        System.out.println("    Phase 2 with U1 Launching: " + u1Ph2_launchCrashPer + "% of crashing.");
+        System.out.println("    Phase 2 with U1 Landing: " + u1Ph2_landCrashPer + "% of crashing.");
         //System.out.println("---------------------------------------------------------------------");
 
 
@@ -71,18 +85,29 @@ public class Main {
         int u2Ph1_launchCrash = (int) u2Ph1_simu[1];
         int u2Ph1_landCrash = (int) u2Ph1_simu[2];
         int u2Ph1_crash = u2Ph1_landCrash + u2Ph1_launchCrash;
-        float u2Ph1_minlandCrashPer = (float) u2Ph1_simu[3];
-        float u2Ph1_maxlandCrashPer = (float) u2Ph1_simu[4];
-        float u2Ph1_minlaunchCrashPer = (float) u2Ph1_simu[5];
-        float u2Ph1_maxlaunchCrashPer = (float) u2Ph1_simu[6];
+        //float u2Ph1_minlandCrashPer = (float) u2Ph1_simu[3];
+        //float u2Ph1_maxlandCrashPer = (float) u2Ph1_simu[4];
+        //float u2Ph1_minlaunchCrashPer = (float) u2Ph1_simu[5];
+        //float u2Ph1_maxlaunchCrashPer = (float) u2Ph1_simu[6];
+
+        float u2Ph1_landCrashPer = 0,u2Ph1_launchCrashPer = 0;
+        if (u2Ph1_crash != 0){
+            u2Ph1_landCrashPer =   (u2Ph1_landCrash/(float) u2Ph1_crash) * 100;
+            u2Ph1_launchCrashPer = (u2Ph1_launchCrash/(float) u2Ph1_crash) * 100;
+        }
+
+
 
         System.out.println("---------------------------------------------------------------------");
         System.out.println("Phase 1 with U2: $" + u2Ph1_cost + " Million");
         System.out.println("    Phase 1 with U2: " + u2Ph1_launchCrash + " Crashes during launch");
         System.out.println("    Phase 1 with U2: " + u2Ph1_landCrash + " Crashes during land");
         System.out.println("    Phase 1 with U2 Crash: " + u2Ph1_crash);
-        System.out.println("    Phase 1 with U2 Launching: " + u2Ph1_minlaunchCrashPer + "% of crashing at min, " + u2Ph1_maxlaunchCrashPer + "% of crashing at max");
-        System.out.println("    Phase 1 with U2 Landing: " + u2Ph1_minlandCrashPer + "% of crashing at min, " + u2Ph1_maxlandCrashPer + "% of crashing at max");
+        //System.out.println("    Phase 1 with U2 Launching: " + u2Ph1_minlaunchCrashPer + "% of crashing at min, " + u2Ph1_maxlaunchCrashPer + "% of crashing at max");
+        //System.out.println("    Phase 1 with U2 Landing: " + u2Ph1_minlandCrashPer + "% of crashing at min, " + u2Ph1_maxlandCrashPer + "% of crashing at max");
+        System.out.println("    Phase 1 with U2 Launching: " + u2Ph1_launchCrashPer + "% of crashing.");
+        System.out.println("    Phase 1 with U2 Landing: " + u2Ph1_landCrashPer + "% of crashing.");
+
 
 
         // Rockets U2 phase 2
@@ -93,19 +118,26 @@ public class Main {
         int u2Ph2_launchCrash = (int) u2Ph2_simu[1];
         int u2Ph2_landCrash = (int) u2Ph2_simu[2];
         int u2Ph2_crash = u2Ph2_landCrash + u2Ph2_launchCrash;
-        float u2Ph2_minlandCrashPer = (float) u2Ph2_simu[3];
-        float u2Ph2_maxlandCrashPer = (float) u2Ph2_simu[4];
-        float u2Ph2_minlaunchCrashPer = (float) u2Ph2_simu[5];
-        float u2Ph2_maxlaunchCrashPer = (float) u2Ph2_simu[6];
+        //float u2Ph2_minlandCrashPer = (float) u2Ph2_simu[3];
+        //float u2Ph2_maxlandCrashPer = (float) u2Ph2_simu[4];
+        //float u2Ph2_minlaunchCrashPer = (float) u2Ph2_simu[5];
+        //float u2Ph2_maxlaunchCrashPer = (float) u2Ph2_simu[6];
+
+        float u2Ph2_landCrashPer = 0, u2Ph2_launchCrashPer = 0;
+        if (u2Ph2_crash != 0){
+            u2Ph2_landCrashPer = (u2Ph2_landCrash/ (float) u2Ph2_crash)*100;
+            u2Ph2_launchCrashPer = (u2Ph2_launchCrash/ (float) u2Ph2_crash)*100;
+        }
 
         System.out.println("---------------------------------------------------------------------");
         System.out.println("Phase 2 with U2: $" + u2Ph2_cost + " Million");
         System.out.println("    Phase 2 with U2: " + u2Ph2_launchCrash + " Crashes during launch");
         System.out.println("    Phase 2 with U2: " + u2Ph2_landCrash + " Crashes during land");
         System.out.println("    Phase 2 with U2 Crash: " + u2Ph2_crash);
-        System.out.println("    Phase 2 with U2 Launching: " + u2Ph2_minlaunchCrashPer + "% of crashing at min, " + u2Ph2_maxlaunchCrashPer + "% of crashing at max");
-        System.out.println("    Phase 2 with U2 Landing: " + u2Ph2_minlandCrashPer + "% of crashing at min, " + u2Ph2_maxlandCrashPer + "% of crashing at max");
-
+        //System.out.println("    Phase 2 with U2 Launching: " + u2Ph2_minlaunchCrashPer + "% of crashing at min, " + u2Ph2_maxlaunchCrashPer + "% of crashing at max");
+        //System.out.println("    Phase 2 with U2 Landing: " + u2Ph2_minlandCrashPer + "% of crashing at min, " + u2Ph2_maxlandCrashPer + "% of crashing at max");
+        System.out.println("    Phase 2 with U2 Launching: " + u2Ph2_launchCrashPer + "% of crashing.");
+        System.out.println("    Phase 2 with U2 Landing: " + u2Ph2_landCrashPer + "% of crashing.");
 
         // Rockets U2 total
         int u2_crash = u2Ph1_crash +u2Ph2_crash;
