@@ -3,41 +3,42 @@
   <ID>JAVA</ID>
   <OriginalElement>Item</OriginalElement>
   <nodes>
-    <node x="511.0" y="0.0">Item</node>
-    <node x="682.0" y="0.0">Simulation</node>
-    <node x="130.5" y="0.0">SpaceShip</node>
-    <node x="64.0" y="651.0">U1</node>
-    <node x="0.0" y="170.0">Rocket</node>
-    <node x="243.0" y="651.0">U2</node>
+    <node x="0.0" y="730.0">Item</node>
+    <node x="383.0" y="0.0">Simulation</node>
+    <node x="66.5" y="0.0">SpaceShip</node>
+    <node x="448.0" y="730.0">MainLoop</node>
+    <node x="52.5" y="170.0">Rocket</node>
+    <node x="0.0" y="563.0">U1</node>
+    <node x="230.0" y="730.0">Main</node>
+    <node x="179.0" y="563.0">U2</node>
   </nodes>
   <notes />
   <edges>
     <edge source="U1" target="Rocket">
-      <point x="0.0" y="-49.5" />
-      <point x="143.5" y="626.0" />
-      <point x="116.5" y="626.0" />
-      <point x="-116.5" y="215.5" />
+      <point x="0.0" y="-61.0" />
+      <point x="79.5" y="538.0" />
+      <point x="110.75" y="538.0" />
+      <point x="-58.25" y="171.5" />
     </edge>
     <edge source="Rocket" target="SpaceShip">
-      <point x="0.0" y="-215.5" />
+      <point x="0.0" y="-171.5" />
       <point x="0.0" y="60.0" />
     </edge>
     <edge source="U2" target="Rocket">
-      <point x="0.0" y="-49.5" />
-      <point x="322.5" y="626.0" />
-      <point x="349.5" y="626.0" />
-      <point x="116.5" y="215.5" />
+      <point x="0.0" y="-61.0" />
+      <point x="258.5" y="538.0" />
+      <point x="227.25" y="538.0" />
+      <point x="58.25" y="171.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8562421185372006" x="509.5" y="386.5" />
-  <SelectedNodes>
-    <node>Item</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.8562421185372006" x="509.5" y="376.5" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
     <Category>Methods</Category>
     <Category>Properties</Category>
+    <Category>Inner Classes</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
