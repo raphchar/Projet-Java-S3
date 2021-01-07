@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class MainLoopIHM {
+public class MainLoopData {
 
     public Object[] runMainLoopIHM(int nbRocketU1_Ph1, int nbRocketU1_Ph2, int nbRocketU2_Ph1, int nbRocketU2_Ph2) {
 
