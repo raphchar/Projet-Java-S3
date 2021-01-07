@@ -4,13 +4,13 @@
   <OriginalElement>Item</OriginalElement>
   <nodes>
     <node x="0.0" y="730.0">Item</node>
-    <node x="383.0" y="0.0">Simulation</node>
     <node x="66.5" y="0.0">SpaceShip</node>
+    <node x="383.0" y="0.0">Simulation</node>
     <node x="448.0" y="730.0">MainLoop</node>
-    <node x="52.5" y="170.0">Rocket</node>
     <node x="0.0" y="563.0">U1</node>
-    <node x="230.0" y="730.0">Main</node>
+    <node x="52.5" y="170.0">Rocket</node>
     <node x="179.0" y="563.0">U2</node>
+    <node x="230.0" y="730.0">Main</node>
   </nodes>
   <notes />
   <edges>
@@ -31,8 +31,10 @@
       <point x="58.25" y="171.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8562421185372006" x="509.5" y="376.5" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.7997644287396938" x="360.0" y="414.5" />
+  <SelectedNodes>
+    <node>Item</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>

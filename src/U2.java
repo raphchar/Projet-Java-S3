@@ -19,6 +19,7 @@ public class U2 extends Rocket {
         if (percentage < minCrashLandPer) {
             minCrashLandPer = percentage;
         }
+
         return random.nextDouble() > percentage;
     }
 

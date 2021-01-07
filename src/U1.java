@@ -33,6 +33,7 @@ public class U1 extends Rocket {
         if (percentage < minCrashLaunchPer) {
             minCrashLaunchPer = percentage;
         }
+
         return random.nextDouble() > percentage;
     }
 }

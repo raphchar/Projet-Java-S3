@@ -55,6 +55,7 @@ public class MainLoop {
         // ROCKETS U1 PHASE 1
         int u1Ph1_TotalCost = 0, u1Ph1_TotalLaunchCrash = 0, u1Ph1_TotalLandCrash = 0;
         int u1Ph1_cost, u1Ph1_launchCrash, u1Ph1_landCrash;
+        int u1Ph1_RocketNoCrash = 0;
 
         for (int i = 0; i < nbRocketU1_Ph1; i++) {
             ArrayList<Item> u1Ph1 = missionToMars.loadItems("Phase-1.txt");
@@ -68,6 +69,10 @@ public class MainLoop {
             u1Ph1_TotalLaunchCrash += u1Ph1_launchCrash;
             u1Ph1_TotalLandCrash += u1Ph1_landCrash;
 
+            if (u1Ph1_launchCrash + u1Ph1_landCrash == 0){
+                u1Ph1_RocketNoCrash += 1;
+            }
+
         }
         int u1Ph1_TotalCrash = u1Ph1_TotalLaunchCrash + u1Ph1_TotalLandCrash;
 
@@ -79,22 +84,23 @@ public class MainLoop {
         System.out.println("    Total: " + u1Ph1_TotalLaunchCrash + " Crashes during launch");
         System.out.println("    Total: " + u1Ph1_TotalLandCrash + " Crashes during land");
         System.out.println("    Total crashes: " + u1Ph1_TotalCrash);
+        System.out.println("    U1 phase I rockets that not crash : " + u1Ph1_RocketNoCrash);
         System.out.println( );
         if (u1Ph1_TotalCrash > 0){
             System.out.println("    Chance of crash during launching is : " +
-                    (u1Ph1_TotalLaunchCrash/(float) u1Ph1_TotalCrash) * 100 +
-                    "%");
+                    (u1Ph1_TotalLaunchCrash/(float) u1Ph1_TotalCrash) * 100 + "%");
             System.out.println("    Chance of crash during landing is : " +
-                    (u1Ph1_TotalLandCrash/(float) u1Ph1_TotalCrash) * 100 +
-                    "%");
+                    (u1Ph1_TotalLandCrash/(float) u1Ph1_TotalCrash) * 100 + "%");
         }
+        System.out.println("    Chance to have any crash for a U1 rocket with phase I : " +
+                (u1Ph1_RocketNoCrash/(float) nbRocketU1_Ph1) * 100 + "%");
 
 
         //---------------------------------------------------------------------------------------------//
         // ROCKETS U1 PHASE 2
         int u1Ph2_TotalCost = 0, u1Ph2_TotalLaunchCrash = 0, u1Ph2_TotalLandCrash = 0;
         int u1Ph2_cost, u1Ph2_launchCrash, u1Ph2_landCrash;
-
+        int u1Ph2_RocketNoCrash = 0;
 
         for (int i = 0; i < nbRocketU1_Ph2; i++) {
             ArrayList<Item> u1Ph2 = missionToMars.loadItems("Phase-2.txt");
@@ -108,6 +114,10 @@ public class MainLoop {
             u1Ph2_TotalLaunchCrash += u1Ph2_launchCrash;
             u1Ph2_TotalLandCrash += u1Ph2_landCrash;
 
+            if (u1Ph2_landCrash + u1Ph2_launchCrash == 0){
+                u1Ph2_RocketNoCrash += 1;
+            }
+
         }
         int u1Ph2_TotalCrash = u1Ph2_TotalLaunchCrash + u1Ph2_TotalLandCrash;
         System.out.println( );
@@ -119,21 +129,24 @@ public class MainLoop {
         System.out.println("    Total: " + u1Ph2_TotalLaunchCrash + " Crashes during launch");
         System.out.println("    Total: " + u1Ph2_TotalLandCrash + " Crashes during land");
         System.out.println("    Total crashes: " + u1Ph2_TotalCrash);
+        System.out.println("    U1 phase II rockets that not crash : " + u1Ph2_RocketNoCrash);
         System.out.println( );
         if (u1Ph2_TotalCrash > 0){
             System.out.println("    Chance of crash during launching is : " +
-                    (u1Ph2_TotalLaunchCrash/(float) u1Ph2_TotalCrash) * 100 +
-                    "%");
+                    (u1Ph2_TotalLaunchCrash/(float) u1Ph2_TotalCrash) * 100 + "%");
             System.out.println("    Chance of crash during landing is : " +
-                    (u1Ph2_TotalLandCrash/(float) u1Ph2_TotalCrash) * 100 +
-                    "%");
+                    (u1Ph2_TotalLandCrash/(float) u1Ph2_TotalCrash) * 100 + "%");
         }
+        System.out.println("    Chance to have any crash for a U1 rocket with phase II : " +
+                (u1Ph2_RocketNoCrash/(float) nbRocketU1_Ph2) * 100 + "%");
 
 
         //---------------------------------------------------------------------------------------------//
         // ROCKETS U2 PHASE 1
         int u2Ph1_TotalCost = 0, u2Ph1_TotalLaunchCrash = 0, u2Ph1_TotalLandCrash = 0;
         int u2Ph1_cost, u2Ph1_launchCrash, u2Ph1_landCrash;
+        int u2Ph1_RocketNoCrash =0;
+
 
         for (int i = 0; i < nbRocketU2_Ph1; i++) {
             ArrayList<Item> u2Ph1 = missionToMars.loadItems("Phase-1.txt");
@@ -147,32 +160,37 @@ public class MainLoop {
             u2Ph1_TotalLaunchCrash += u2Ph1_launchCrash;
             u2Ph1_TotalLandCrash += u2Ph1_landCrash;
 
+            if (u2Ph1_launchCrash + u2Ph1_landCrash == 0){
+                u2Ph1_RocketNoCrash += 1;
+            }
         }
         int u2Ph1_TotalCrash = u2Ph1_TotalLaunchCrash + u2Ph1_TotalLandCrash;
 
         System.out.println("---------------------------------------------------------------------");
-        System.out.println("For the " + nbRocketU2_Ph1 + " rockets U1 using phase I");
+        System.out.println("For the " + nbRocketU2_Ph1 + " rockets U2 using phase I");
         System.out.println("---------------------------------------------------------------------");
 
         System.out.println("    Total cost: $" + u2Ph1_TotalCost + " Million");
         System.out.println("    Total: " + u2Ph1_TotalLaunchCrash + " Crashes during launch");
         System.out.println("    Total: " + u2Ph1_TotalLandCrash + " Crashes during land");
         System.out.println("    Total crashes: " + u2Ph1_TotalCrash);
+        System.out.println("    U2 phase I rockets that not crash : " + u2Ph1_RocketNoCrash);
         System.out.println( );
         if (u2Ph1_TotalCrash > 0){
             System.out.println("    Chance of crash during launching is : " +
-                    (u2Ph1_TotalLaunchCrash/(float) u2Ph1_TotalCrash) * 100 +
-                    "%");
+                    (u2Ph1_TotalLaunchCrash/(float) u2Ph1_TotalCrash) * 100 + "%");
             System.out.println("    Chance of crash during landing is : " +
-                    (u2Ph1_TotalLandCrash/(float) u2Ph1_TotalCrash) * 100 +
-                    "%");
+                    (u2Ph1_TotalLandCrash/(float) u2Ph1_TotalCrash) * 100 + "%");
         }
+        System.out.println("    Chance to have any crash for a U2 rocket with phase I : " +
+                (u2Ph1_RocketNoCrash/(float) nbRocketU2_Ph1) * 100 + "%");
 
 
         //---------------------------------------------------------------------------------------------//
-        // ROCKETS U1 PHASE 2
+        // ROCKETS U2 PHASE 2
         int u2Ph2_TotalCost = 0, u2Ph2_TotalLaunchCrash = 0, u2Ph2_TotalLandCrash = 0;
         int u2Ph2_cost, u2Ph2_launchCrash, u2Ph2_landCrash;
+        int u2Ph2_RocketNoCrash = 0;
 
 
         for (int i = 0; i < nbRocketU2_Ph2; i++) {
@@ -187,17 +205,21 @@ public class MainLoop {
             u2Ph2_TotalLaunchCrash += u2Ph2_launchCrash;
             u2Ph2_TotalLandCrash += u2Ph2_landCrash;
 
+            if (u2Ph2_launchCrash + u2Ph2_landCrash == 0){
+                u2Ph2_RocketNoCrash += 1;
+            }
         }
         int u2Ph2_TotalCrash = u2Ph2_TotalLaunchCrash + u2Ph2_TotalLandCrash;
         System.out.println( );
         System.out.println("---------------------------------------------------------------------");
-        System.out.println("For the " + nbRocketU2_Ph2 + " rockets U1 using phase II");
+        System.out.println("For the " + nbRocketU2_Ph2 + " rockets U2 using phase II");
         System.out.println("---------------------------------------------------------------------");
 
         System.out.println("    Total cost: $" + u2Ph2_TotalCost + " Million");
         System.out.println("    Total: " + u2Ph2_TotalLaunchCrash + " Crashes during launch");
         System.out.println("    Total: " + u2Ph2_TotalLandCrash + " Crashes during land");
         System.out.println("    Total crashes: " + u2Ph2_TotalCrash);
+        System.out.println("    U2 phase I rockets that not crash : " + u2Ph2_RocketNoCrash);
         System.out.println( );
         if (u2Ph2_TotalCrash > 0){
             System.out.println("    Chance of crash during launching is : " +
@@ -207,5 +229,8 @@ public class MainLoop {
                     (u2Ph2_TotalLandCrash/(float) u2Ph2_TotalCrash) * 100 +
                     "%");
         }
+        System.out.println("    Chance to have any crash for a U2 rocket with phase II : " +
+                (u2Ph2_RocketNoCrash/(float) nbRocketU2_Ph2) * 100 +
+                "%");
     }
 }
